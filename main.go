@@ -151,8 +151,7 @@ func main() {
         os.Exit(0)
     }
     
-    //Set up input arguments
-    
+    // Set up input arguments
     inputPathPtr := flag.String("inp", "", "Path to the input file")
     inputDimensionsPtr := flag.String("dim", "", "Stored dimensions of the input file. Enter in the format x,y,z. Example: 192,2048,192")
     outputPathPtr := flag.String("out", "", "Path or name of the output file")
@@ -161,6 +160,7 @@ func main() {
     permutationsPtr := flag.Int("perm", 213, "Permute the output dimensions. E.g. 312 changes output from xyz to zxy")
     flag.Parse()
     
+    // Check arguments
     if *inputPathPtr == "" {
         fmt.Println("Error: input path is required")
         os.Exit(1)
