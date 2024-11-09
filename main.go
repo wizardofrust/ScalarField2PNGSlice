@@ -155,9 +155,9 @@ func main() {
     inputPathPtr := flag.String("inp", "", "Path to the input file")
     inputDimensionsPtr := flag.String("dim", "", "Stored dimensions of the input file. Enter in the format x,y,z. Example: 192,2048,192")
     outputPathPtr := flag.String("out", "", "Path or name of the output file")
-    invertPtr := flag.Bool("inv", true, "Multiply the data by -1")
-    numLogsPtr := flag.Int("log", 2, "Apply the target number of log scales to the data")
-    permutationsPtr := flag.Int("perm", 213, "Permute the output dimensions. E.g. 312 changes output from xyz to zxy")
+    invertPtr := flag.Bool("inv", false, "Multiply the data by -1. Just include the flag. Do not supply a value to it")
+    numLogsPtr := flag.Int("log", 0, "Apply the target number of log scales to the data")
+    permutationsPtr := flag.Int("perm", 123, "Permute the output dimensions. E.g. 312 changes output from xyz to zxy")
     flag.Parse()
     
     // Check arguments
