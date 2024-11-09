@@ -6,12 +6,14 @@ This is a specialized program for taking a binary blob containing scalar field d
 
 Install Go and navigate a terminal into the folder containing main.go. Run this command:
 
-```go build .
+```
+go build .
 ```
 
 Cross-compilation, or compiling for a platform other than the one you are on, is easy. Follow the normal directions for cross-compilation in Go. Here is an example using Powershell on Windows:
 
-```$env:GOOS = "linux"
+```
+$env:GOOS = "linux"
 $env:GOARCH = "amd64"
 go build .
 ```
@@ -20,12 +22,14 @@ go build .
 
 Run the program through the command line or terminal. Ensure that your input data is a raw data blob of 32-bit floats (4 bytes each). For a list of options, run the program with the --help flag:
 
-```ScalarField2PNGSlice.exe --help
+```
+ScalarField2PNGSlice.exe --help
 ```
 
 Here is an example command for running the program:
 
-```ScalarField2PNGSlice.exe -inp raw_data_out.bin -dim 192,2048,192 -out slices.zip -inv -log 2 -perm 213
+```
+ScalarField2PNGSlice.exe -inp raw_data_out.bin -dim 192,2048,192 -out slices.zip -inv -log 2 -perm 213
 ```
 
 The -inp flag is required, and specifies the path to the input data.
